@@ -16,22 +16,20 @@ public class Translator {
         numericAlpha.put(0, "nul");
     }
 
-    public Translator() {
-
-    }
 
     public Translator(String[] alphabetic, Integer[] numeric) {
 
 
         for (int i = 0; i < alphabetic.length; i++) {
 
-            numericAlpha.put(11, "elf");
+            numericAlpha.put(numeric[i], alphabetic[i]);
+
             System.out.println(alphabetic[i]);
         }
     }
 
-    public Integer translate(Integer number) {
-        return number;
+    public String translate(Integer number) {
+        return numericAlpha.get(number);
     }
 
 
